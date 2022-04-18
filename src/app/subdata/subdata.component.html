@@ -1,0 +1,19 @@
+<div>AllSET</div>
+<button mat-raised-button color="primary" *ngFor="let all of data">
+  id:{{ all.id }}-name:{{ all.name }}-system:{{ all.system }}
+
+</button>
+<div>SUBSET</div>
+<button mat-raised-button color="primary" *ngFor="let Sub of Subdata">
+  id:{{ Sub.id }}-name:{{ Sub.name }}-system:{{ Sub.system }}
+</button>
+<div  >FINALSET<div >
+<button mat-raised-button color="primary" *ngFor="let final of FinalData">
+    id:{{ final.id }}-name:{{ final.name }}-system:{{ final.system }}
+</button>
+</div>
+<div  >Final set remove dublicate<div >
+  <button mat-raised-button color="primary" *ngFor="let Dfinal of DFinalData">
+      id:{{ Dfinal.id }}-name:{{ Dfinal.name }}-system:{{ Dfinal.system }}
+  </button>
+  </div>

@@ -1,0 +1,22 @@
+<h2>Role Level</h2>
+
+<mat-form-field appearance="outline" *ngFor="let role of roles">
+  <mat-label>Role</mat-label>
+  <mat-select [(ngModel)]="parent" (selectionChange)="onChange($event)">
+    <mat-option [value]="role" *ngFor="let role of roles">{{
+      role.roleDescEn
+    }}</mat-option>
+  </mat-select>
+</mat-form-field>
+<ng-container ngfor>
+  <div>
+    <mat-form-field appearance="outline">
+      <mat-label>Sub Role </mat-label>
+      <mat-select [(ngModel)]="parent" (selectionChange)="onChange($event)">
+        <mat-option [value]="parent" *ngFor="let item of parent?.children">{{
+          item.roleDescEn
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</ng-container>
